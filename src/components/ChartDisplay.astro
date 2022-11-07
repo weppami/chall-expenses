@@ -1,0 +1,64 @@
+---
+import { Chart } from "chart.js";
+---
+
+<script>
+  import dataSet from "../../assets/data/data.json?raw";
+  const chartData = JSON.parse(dataSet);
+  var labels = chartData.map(function (e) {
+    return e.day;
+  });
+  var data = chartData.map(function (e) {
+    return e.amount;
+  });
+
+  const ctx = document.getElementById("myChart");
+  const myChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "",
+          data: data,
+          backgroundColor: [
+            "hsl(10, 79%, 65%)",
+            "hsl(10, 79%, 65%)",
+            "hsl(186, 34%, 60%)",
+            "hsl(10, 79%, 65%)",
+            "hsl(10, 79%, 65%)",
+            "hsl(10, 79%, 65%)",
+            "hsl(10, 79%, 65%)",
+          ],
+        },
+      ],
+    },
+    options: {
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        y: {
+          display: false,
+          grid: {
+            display: false,
+          },
+        },
+        x: {
+          ticks: { color: "hsl(28, 10%, 53%)", beginAtZero: true },
+          grid: {
+            display: false,
+          },
+        },
+      },
+    },
+  });
+</script>
+
+<div class="w-full h-60 mt-6 mb-4">
+  <canvas id="myChart" aria-label="expenses chart display" role="img"></canvas>
+  <hr class="my-4 bg-medium-brown border-0 h-px opacity-30" />
+</div>
