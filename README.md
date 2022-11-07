@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [My solution](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt/hub/expense-chart-using-chartjs-tailwind-astro-LRkynb6T3e)
 - Live Site URL: [Netlify](https://magical-starburst-a69c69.netlify.app/)
 
 ## My process
